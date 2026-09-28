@@ -1,8 +1,7 @@
 <h1 align="center">Jasmin (Mingqin) Yu</h1>
 
 <p align="center">
-  <b>I build AI systems for places where a confident wrong answer is worse than no answer.</b><br>
-  <sub>PhD Computer Science (UNSW) · Master of Finance · 2 years banking · Sydney</sub>
+  <sub>Software Engineering · LLM &amp; Agents · Knowledge Graphs · Financial Services · Sydney</sub>
 </p>
 
 <p align="center">
@@ -13,30 +12,29 @@
 
 ---
 
-Four years building LLM and ML systems as an **industry PhD researcher** with Cognitivo —
-including **Project P002 with Westpac**, ESG risk scoring for investment decisions, which I
-led from requirements to deployment with a team of four. Before that, two years in corporate
-banking on lending and credit risk.
+### 🤖 [Grounded RAG + Agent](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG)
+Tool-calling agent **and** fixed RAG pipeline over one store, so they can be compared.
+Reasoning loop · 5 tool interfaces · bounded turns · every call traced.
+<br>`Python` `Anthropic API` `Flask` `SQLite` `Docker` `pytest · 18 tests`
 
-**Three things I learned the hard way:**
+### 🏦 [Materiality Misalignment Risk](https://github.com/Inspiring-Ming/Quantifying-Materiality-Misalignment-Risk-)
+20 sustainability reports from **ANZ · CBA · NAB · Westpac** scored against SASB FN-CB.
+Two models compared, weight and prompt ablations, 30 human-annotated validation pairs.
+<br>`LLM evaluation` `Banking disclosure` `Reproducible corpus`
 
-| | |
-|---|---|
-| 🎯 | LLM extraction was **under 10% accurate** — plausible-looking wrong answers. Splitting schema checks from semantic checks got it to **65–90%**. |
-| 💸 | The pipeline was too expensive to run. The biggest input block was identical every call, so I moved it behind the cache boundary: **48× cheaper**. |
-| 🤔 | Everyone wants an agent. I built both an agent and a fixed pipeline over the same data — **the fixed one is still the default**. |
+### 🕸️ [OntoMetric — ESG Knowledge Graph](https://github.com/Inspiring-Ming/ESG-Metric-KG-System)
+Ontology-driven metric computation: entities, relationships and calculation logic modelled
+so every generated figure traces back to source. **Published at IEEE ICWS 2026.**
+<br>`Knowledge Graph` `Ontology` `Python` `RAG` `Provenance`
 
----
+### 📊 [ESG Landscape Explorer](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML)
+6.6M raw observations → clean company × metric matrix → PCA, KMeans, disclosure-gap analysis.
+Streamlit dashboard with a live SQL console.
+<br>`scikit-learn` `SQL` `pandas` `Streamlit`
 
-### Code
-
-**[🤖 Grounded RAG + Agent](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG)** — reasoning loop, 5 tools, bounded turns, every call traced · `Python` `Anthropic` `Docker` `18 tests`
-
-**[🏦 Materiality Misalignment Risk](https://github.com/Inspiring-Ming/Quantifying-Materiality-Misalignment-Risk-)** — ANZ/CBA/NAB/Westpac reports scored against SASB, with ablations and human validation · `LLM evaluation`
-
-**[📊 ESG Landscape Explorer](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML)** — 6.6M observations → PCA, KMeans, Streamlit dashboard · `scikit-learn` `SQL`
-
-**[🎬 IMDb Sentiment](https://github.com/Inspiring-Ming/imdb-sentiment-dl)** — 0.84 F1 on 50K reviews, containerised · `Keras` `NLP`
+### 🎬 [IMDb Sentiment](https://github.com/Inspiring-Ming/imdb-sentiment-dl)
+Word2Vec + neural network, **0.84 F1** on 50K reviews. Config-driven pipeline, tested, containerised.
+<br>`TensorFlow/Keras` `NLP` `Docker`
 
 ---
 
@@ -45,16 +43,13 @@ banking on lending and credit risk.
   <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white">
   <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white">
   <img src="https://img.shields.io/badge/Anthropic-191919?style=flat-square&logo=anthropic&logoColor=white">
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white">
   <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white">
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
   <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white">
 </p>
 
 <p align="center">
-  <sub>Published at <b>IEEE ICWS 2026</b> · <b>HICSS-59</b> · <b><i>Electronics</i></b> —
-  <a href="https://scholar.google.com/citations?user=1nRQ9twAAAAJ&hl=en">Scholar</a></sub>
-</p>
-
-<p align="center">
-  <b>Open to data science and AI engineering roles in Sydney.</b>
+  <sub>PhD Computer Science (UNSW) · Master of Finance · IEEE ICWS 2026 · HICSS-59 ·
+  <b>Open to data science and AI engineering roles</b></sub>
 </p>
