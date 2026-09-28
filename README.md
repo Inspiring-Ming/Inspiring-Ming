@@ -13,37 +13,60 @@
 
 ---
 
-### 🤖 [Grounded RAG + Agent](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG)
-A tool-calling [agent](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG/blob/main/app/agent.py)
-**and** a fixed RAG pipeline over the same store, so the two can be compared honestly.
-→ the model sequences its own retrieval; bounded turns, every call traced, errors returned for recovery.
-**Result:** repeat-call cost cut to **1/10** by caching · [18 tests](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG/blob/main/tests/test_agent.py) that run without an API key.
-<br>`Python` `Anthropic API` `Flask` `SQLite` `Docker` `pytest`
+### 📊 ESG Landscape Explorer
+**The question:** with 6.6M messy ESG data points, what actually separates one company from another?
+**What I built:** a pipeline that cleans the data into a company × metric matrix, then PCA and
+clustering to find the structure, served as a dashboard anyone can query in SQL.
+**What I found:** the strongest signal isn't performance, it's *how much a company discloses* —
+84% of environmental figures are estimates, not reported numbers.
 
-### 🏦 [Materiality Misalignment Risk](https://github.com/Inspiring-Ming/Quantifying-Materiality-Misalignment-Risk-) · [🌐 Live results](https://inspiring-ming.github.io/Quantifying-Materiality-Misalignment-Risk-/)
-20 sustainability reports from **ANZ · CBA · NAB · Westpac** (2021–2025) scored against
-the SASB FN-CB Commercial Banks standard.
-→ two models compared, weight and prompt ablations, 3-run stability, 30 human-annotated pairs.
-**Result:** mean MMRI **0.172** (Claude) vs **0.464** (GPT) · corpus reproducible by SHA-256 checksum.
+[🚀 Try the dashboard](https://huggingface.co/spaces/Inspiring-Ming/esg-landscape-explorer) · [Code](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML)
+<br>`Python` `scikit-learn` `SQL` `Streamlit`
+
+---
+
+### 🤖 Grounded RAG + Agent
+**The question:** everyone wants an AI agent — but is one actually better than a simple pipeline?
+**What I built:** both, over the same data, so the comparison is real. The agent picks its own
+retrieval steps; the pipeline follows a fixed path. Every agent call is traced and turn-capped.
+**What I found:** the simple pipeline wins most of the time. The agent only earns its place when
+you can't predict what the question will need.
+
+[Read the agent loop](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG/blob/main/app/agent.py) · [18 tests](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG/blob/main/tests/test_agent.py) · [Code](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG)
+<br>`Python` `Anthropic API` `Flask` `Docker` `pytest`
+
+---
+
+### 🕸️ OntoMetric — ESG Knowledge Graph
+**The question:** how do you make an LLM's output defensible enough to put in a report?
+**What I built:** a knowledge graph that defines every metric — what it means, how it's calculated,
+where it came from — so the model fills in a structure instead of inventing one.
+**What I found:** accuracy went from under 10% to 65–90%, and every figure traces back to its source.
+
+[🌐 Project page](https://inspiring-ming.github.io/OntoMetric/) · [Code](https://github.com/Inspiring-Ming/ESG-Metric-KG-System) · Published at **IEEE ICWS 2026**
+<br>`Knowledge Graph` `Ontology` `RAG` `Provenance`
+
+---
+
+### 🏦 Materiality Misalignment Risk
+**The question:** do the big four Australian banks report what actually matters?
+**What I built:** an LLM-assisted scoring method, run over 20 sustainability reports from
+**ANZ, CBA, NAB and Westpac** and checked against the SASB banking standard.
+**What I found:** a measurable gap — and two models disagreed sharply (0.172 vs 0.464), which is
+why I ran stability tests and human checks rather than trusting one score.
+
+[🌐 Live results](https://inspiring-ming.github.io/Quantifying-Materiality-Misalignment-Risk-/) · [Code](https://github.com/Inspiring-Ming/Quantifying-Materiality-Misalignment-Risk-)
 <br>`LLM evaluation` `Banking disclosure` `Reproducibility`
 
-### 🕸️ [OntoMetric — ESG Knowledge Graph](https://github.com/Inspiring-Ming/ESG-Metric-KG-System)
-RDF knowledge graph modelling entities, relationships and calculation logic, so every
-generated figure traces back to source.
-**Result:** published at **IEEE ICWS 2026**; extraction accuracy from under 10% to **65–90%**
-with end-to-end provenance · [thesis](https://unsworks.unsw.edu.au/entities/publication/68e19b33-bfbb-4398-96f5-59239f6830b9)
-<br>`Knowledge Graph` `Ontology` `RAG` `Provenance` `Python`
+---
 
-### 📊 [ESG Landscape Explorer](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML) · [🚀 Live demo](https://huggingface.co/spaces/Inspiring-Ming/esg-landscape-explorer)
-**6.6M** raw observations reduced to a clean company × metric matrix, then PCA, KMeans and a
-disclosure-gap analysis, served as a Streamlit dashboard with a live SQL console.
-**Result:** PC1 (17.5% of variance) tracks *disclosure maturity*, not performance — **84%** of
-environmental observations are estimated rather than reported.
-<br>`scikit-learn` `SQL` `pandas` `Streamlit`
+### 🎬 IMDb Sentiment
+**The question:** can a small, well-engineered model beat a big, badly-run one?
+**What I built:** Word2Vec plus a neural network over 50K reviews, with a config-driven pipeline,
+tests and a container — so it runs the same way every time.
+**What I found:** 0.84 F1, and a setup I can retrain in one command.
 
-### 🎬 [IMDb Sentiment](https://github.com/Inspiring-Ming/imdb-sentiment-dl)
-Word2Vec + neural network over 50K reviews. Config-driven pipeline, tested, containerised.
-**Result:** **0.84 F1.**
+[Code](https://github.com/Inspiring-Ming/imdb-sentiment-dl)
 <br>`TensorFlow/Keras` `NLP` `Docker`
 
 ---
