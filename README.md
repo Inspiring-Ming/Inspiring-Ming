@@ -20,7 +20,7 @@ A tool-calling [agent](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG
 **Result:** repeat-call cost cut to **1/10** by caching · [18 tests](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG/blob/main/tests/test_agent.py) that run without an API key.
 <br>`Python` `Anthropic API` `Flask` `SQLite` `Docker` `pytest`
 
-### 🏦 [Materiality Misalignment Risk](https://github.com/Inspiring-Ming/Quantifying-Materiality-Misalignment-Risk-)
+### 🏦 [Materiality Misalignment Risk](https://github.com/Inspiring-Ming/Quantifying-Materiality-Misalignment-Risk-) · [🌐 Live results](https://inspiring-ming.github.io/Quantifying-Materiality-Misalignment-Risk-/)
 20 sustainability reports from **ANZ · CBA · NAB · Westpac** (2021–2025) scored against
 the SASB FN-CB Commercial Banks standard.
 → two models compared, weight and prompt ablations, 3-run stability, 30 human-annotated pairs.
@@ -34,7 +34,7 @@ generated figure traces back to source.
 with end-to-end provenance · [thesis](https://unsworks.unsw.edu.au/entities/publication/68e19b33-bfbb-4398-96f5-59239f6830b9)
 <br>`Knowledge Graph` `Ontology` `RAG` `Provenance` `Python`
 
-### 📊 [ESG Landscape Explorer](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML)
+### 📊 [ESG Landscape Explorer](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML) · [🚀 Live demo](https://huggingface.co/spaces/Inspiring-Ming/esg-landscape-explorer)
 **6.6M** raw observations reduced to a clean company × metric matrix, then PCA, KMeans and a
 disclosure-gap analysis, served as a Streamlit dashboard with a live SQL console.
 **Result:** PC1 (17.5% of variance) tracks *disclosure maturity*, not performance — **84%** of
