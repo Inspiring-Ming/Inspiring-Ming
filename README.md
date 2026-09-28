@@ -18,12 +18,9 @@
 
 ### 📊 ESG Landscape Explorer
 
-6.6M raw ESG observations, cleaned into a company × metric matrix, then PCA and clustering to see
-what actually separates one company from another.
-
-The answer turned out to be disclosure rather than performance: the first principal component
-tracks how much a company reports, and 84% of environmental figures are estimates rather than
-reported numbers.
+6.6M raw observations cleaned into a company × metric matrix, then PCA and clustering to see what
+separates one company from another. Turned out to be disclosure, not performance — 84% of
+environmental figures are estimates rather than reported numbers.
 
 **[🚀 Live dashboard](https://huggingface.co/spaces/Inspiring-Ming/esg-landscape-explorer)** · [Code](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML)
 <br>`Python` `scikit-learn` `SQL` `Streamlit`
@@ -33,12 +30,10 @@ reported numbers.
 
 ### 🤖 Grounded RAG + Agent
 
-I kept reading that agents beat fixed pipelines, so I built both over the same data to check.
-The agent chooses its own retrieval steps; the pipeline follows a set path.
-
-For most questions the pipeline was better — cheaper, easier to test, same answer. The agent only
-paid off when the question needed chaining. Every agent call is traced and the loop is turn-capped,
-because an agent you can't audit isn't much use in a bank.
+I kept reading that agents beat fixed pipelines, so I built both over the same data to check. For
+most questions the pipeline was better: cheaper, easier to test, same answer. The agent only paid
+off when the question needed chaining. Every call is traced and the loop turn-capped, because an
+agent you can't audit isn't much use in a bank.
 
 **[🌐 Project page](https://inspiring-ming.github.io/Reporting-Agent-for-ESG/)** · [Code](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG)
 <br>`Python` `Anthropic API` `Docker` `18 tests`
@@ -51,11 +46,9 @@ because an agent you can't audit isn't much use in a bank.
 ### 🕸️ OntoMetric — Knowledge Graph
 
 Asking an LLM to pull numbers out of sustainability reports gave answers that looked right and
-often weren't. So I built a knowledge graph defining each metric — what it means, how it's
-calculated, where it came from — and had the model fill that structure instead.
-
-Accuracy went from under 10% to somewhere between 65% and 90%, depending on the document, and
-every figure could be traced back to its source.
+often weren't. So I built a knowledge graph defining each metric — meaning, calculation, source —
+and had the model fill that structure instead. Accuracy went from under 10% to 65–90%, with every
+figure traceable back to source.
 
 **[🌐 Project page](https://inspiring-ming.github.io/OntoMetric/)** · [Code](https://github.com/Inspiring-Ming/ESG-Metric-KG-System) · *IEEE ICWS 2026*
 <br>`Knowledge Graph` `Ontology` `RAG` `Provenance`
@@ -65,12 +58,10 @@ every figure could be traced back to its source.
 
 ### 🏦 Materiality Misalignment Risk
 
-Do the big four Australian banks report what the SASB standard says matters? I scored 20
-sustainability reports from **ANZ, CBA, NAB and Westpac** to find out.
-
-There's a measurable gap. More interestingly, two models disagreed a lot on how big it was
-(0.172 vs 0.464), which is why the project ended up including stability runs and 30 human-checked
-pairs rather than a single headline number.
+Do the big four Australian banks report what the SASB standard says matters? I scored 20 reports
+from **ANZ, CBA, NAB and Westpac**. There's a measurable gap — but two models disagreed a lot on
+its size (0.172 vs 0.464), which is why this ended up with stability runs and 30 human-checked
+pairs instead of one headline number.
 
 **[🌐 Live results](https://inspiring-ming.github.io/Quantifying-Materiality-Misalignment-Risk-/)** · [Code](https://github.com/Inspiring-Ming/Quantifying-Materiality-Misalignment-Risk-)
 <br>`LLM evaluation` `Banking disclosure` `Reproducibility`
@@ -82,12 +73,10 @@ pairs rather than a single headline number.
 
 ### 🎬 IMDb Sentiment
 
-The standard Keras tutorial flattens an embedding layer, which throws away word order. I wanted
-to know whether fixing that mattered, so I ran three models on identical splits and changed one
-thing at a time.
-
-Average-pooling won at 0.838 accuracy and 0.840 F1, beating both the tutorial and an LSTM. The
-cheap structural fix, not the expensive sequence model.
+The standard Keras tutorial flattens an embedding layer, throwing away word order. I ran three
+models on identical splits to see if fixing that mattered. Average-pooling won at 0.838 accuracy
+and 0.840 F1, beating both the tutorial and an LSTM — the cheap structural fix, not the expensive
+sequence model.
 
 **[🌐 Project page](https://inspiring-ming.github.io/imdb-sentiment-dl/)** · [Code](https://github.com/Inspiring-Ming/imdb-sentiment-dl)
 <br>`TensorFlow/Keras` `NLP` `Docker`
@@ -103,8 +92,8 @@ cheap structural fix, not the expensive sequence model.
 
 `FastAPI` `Flask` `Docker` `CI/CD` `pytest` `AWS`
 
-Four years on an industry PhD with Cognitivo, including a project with Westpac on ESG risk
-scoring. Two years in corporate banking before that, on lending and credit risk.
+Four years on an industry PhD with Cognitivo, including a Westpac project on ESG risk scoring.
+Two years in corporate banking before that.
 
 **Published:** IEEE ICWS 2026 · HICSS-59 · *Electronics*
 
