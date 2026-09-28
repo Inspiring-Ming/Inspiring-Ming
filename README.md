@@ -22,7 +22,7 @@ A tool-calling [agent](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG
 
 ### 🏦 [Materiality Misalignment Risk](https://github.com/Inspiring-Ming/Quantifying-Materiality-Misalignment-Risk-)
 20 sustainability reports from **ANZ · CBA · NAB · Westpac** (2021–2025) scored against
-[SASB FN-CB](https://sasb.ifrs.org/standards/download/).
+the SASB FN-CB Commercial Banks standard.
 → two models compared, weight and prompt ablations, 3-run stability, 30 human-annotated pairs.
 **Result:** mean MMRI **0.172** (Claude) vs **0.464** (GPT) · corpus reproducible by SHA-256 checksum.
 <br>`LLM evaluation` `Banking disclosure` `Reproducibility`
