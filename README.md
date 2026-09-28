@@ -1,7 +1,8 @@
 <h1 align="center">Jasmin (Mingqin) Yu</h1>
 
 <p align="center">
-  <sub>Software Engineering · LLM &amp; Agents · Knowledge Graphs · Financial Services · Sydney</sub>
+  <b>AI &amp; Data Scientist</b> — LLM systems, agents and knowledge graphs for financial services<br>
+  <sub>PhD Computer Science (UNSW) · Master of Finance · Sydney</sub>
 </p>
 
 <p align="center">
@@ -11,79 +12,85 @@
   <a href="mailto:mingchin.yuyu@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
 </p>
 
----
+<table>
+<tr>
+<td width="50%" valign="top">
 
 ### 📊 ESG Landscape Explorer
-**The question:** with 6.6M messy ESG data points, what actually separates one company from another?
-**What I built:** a pipeline that cleans the data into a company × metric matrix, then PCA and
-clustering to find the structure, served as a dashboard anyone can query in SQL.
-**What I found:** the strongest signal isn't performance, it's *how much a company discloses* —
-84% of environmental figures are estimates, not reported numbers.
+**Q.** With 6.6M messy data points, what actually separates one company from another?
+**Built.** Cleaning pipeline → company × metric matrix → PCA + KMeans, served as a dashboard you can query in SQL.
+**Found.** The strongest signal isn't performance, it's *how much a company discloses*. 84% of environmental figures are estimates.
 
-[🚀 Try the dashboard](https://huggingface.co/spaces/Inspiring-Ming/esg-landscape-explorer) · [Code](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML)
+**[🚀 Live dashboard](https://huggingface.co/spaces/Inspiring-Ming/esg-landscape-explorer)** · [Code](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML)
 <br>`Python` `scikit-learn` `SQL` `Streamlit`
 
----
+</td>
+<td width="50%" valign="top">
 
 ### 🤖 Grounded RAG + Agent
-**The question:** everyone wants an AI agent — but is one actually better than a simple pipeline?
-**What I built:** both, over the same data, so the comparison is real. The agent picks its own
-retrieval steps; the pipeline follows a fixed path. Every agent call is traced and turn-capped.
-**What I found:** the simple pipeline wins most of the time. The agent only earns its place when
-you can't predict what the question will need.
+**Q.** Everyone wants an agent — is one actually better than a simple pipeline?
+**Built.** Both, over the same data, so the comparison is real. Agent picks its own steps; every call traced and turn-capped.
+**Found.** The simple pipeline wins most of the time. The agent earns its place only when you can't predict the question.
 
-[Read the agent loop](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG/blob/main/app/agent.py) · [18 tests](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG/blob/main/tests/test_agent.py) · [Code](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG)
-<br>`Python` `Anthropic API` `Flask` `Docker` `pytest`
+**[🌐 Project page](https://inspiring-ming.github.io/Reporting-Agent-for-ESG/)** · [Code](https://github.com/Inspiring-Ming/Reporting-Agent-for-ESG)
+<br>`Python` `Anthropic API` `Docker` `18 tests`
 
----
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-### 🕸️ OntoMetric — ESG Knowledge Graph
-**The question:** how do you make an LLM's output defensible enough to put in a report?
-**What I built:** a knowledge graph that defines every metric — what it means, how it's calculated,
-where it came from — so the model fills in a structure instead of inventing one.
-**What I found:** accuracy went from under 10% to 65–90%, and every figure traces back to its source.
+### 🕸️ OntoMetric — Knowledge Graph
+**Q.** How do you make an LLM's output defensible enough to put in a report?
+**Built.** A knowledge graph defining every metric — meaning, calculation, source — so the model fills a structure instead of inventing one.
+**Found.** Accuracy from under 10% to **65–90%**, every figure traceable to source.
 
-[🌐 Project page](https://inspiring-ming.github.io/OntoMetric/) · [Code](https://github.com/Inspiring-Ming/ESG-Metric-KG-System) · Published at **IEEE ICWS 2026**
+**[🌐 Project page](https://inspiring-ming.github.io/OntoMetric/)** · [Code](https://github.com/Inspiring-Ming/ESG-Metric-KG-System) · *IEEE ICWS 2026*
 <br>`Knowledge Graph` `Ontology` `RAG` `Provenance`
 
----
+</td>
+<td width="50%" valign="top">
 
 ### 🏦 Materiality Misalignment Risk
-**The question:** do the big four Australian banks report what actually matters?
-**What I built:** an LLM-assisted scoring method, run over 20 sustainability reports from
-**ANZ, CBA, NAB and Westpac** and checked against the SASB banking standard.
-**What I found:** a measurable gap — and two models disagreed sharply (0.172 vs 0.464), which is
-why I ran stability tests and human checks rather than trusting one score.
+**Q.** Do the big four Australian banks report what actually matters?
+**Built.** LLM-assisted scoring over 20 reports from **ANZ, CBA, NAB, Westpac**, checked against the SASB banking standard.
+**Found.** A measurable gap — and two models disagreed sharply (0.172 vs 0.464), so I added stability runs and human checks.
 
-[🌐 Live results](https://inspiring-ming.github.io/Quantifying-Materiality-Misalignment-Risk-/) · [Code](https://github.com/Inspiring-Ming/Quantifying-Materiality-Misalignment-Risk-)
+**[🌐 Live results](https://inspiring-ming.github.io/Quantifying-Materiality-Misalignment-Risk-/)** · [Code](https://github.com/Inspiring-Ming/Quantifying-Materiality-Misalignment-Risk-)
 <br>`LLM evaluation` `Banking disclosure` `Reproducibility`
 
----
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
 ### 🎬 IMDb Sentiment
-**The question:** can a small, well-engineered model beat a big, badly-run one?
-**What I built:** Word2Vec plus a neural network over 50K reviews, with a config-driven pipeline,
-tests and a container — so it runs the same way every time.
-**What I found:** 0.84 F1, and a setup I can retrain in one command.
+**Q.** Does a better architecture beat the standard tutorial, or do people just assume it does?
+**Built.** Three models, identical splits, one variable changed: Flatten vs average-pooling vs LSTM.
+**Found.** Pooling beat both — **0.838 accuracy, 0.840 F1**. The cheap structural fix won, not the expensive sequence model.
 
-[Code](https://github.com/Inspiring-Ming/imdb-sentiment-dl)
+**[🌐 Project page](https://inspiring-ming.github.io/imdb-sentiment-dl/)** · [Code](https://github.com/Inspiring-Ming/imdb-sentiment-dl)
 <br>`TensorFlow/Keras` `NLP` `Docker`
 
----
+</td>
+<td width="50%" valign="top">
+
+### 🛠 Toolkit
+
+`Python` `SQL` `pandas` `scikit-learn` `TensorFlow`
+
+`Anthropic` `OpenAI` `RAG` `Agents` `MCP` `Knowledge Graphs`
+
+`FastAPI` `Flask` `Docker` `CI/CD` `pytest` `AWS`
+
+**Domain:** financial services · credit &amp; risk · sustainability disclosure
+
+**Published:** IEEE ICWS 2026 · HICSS-59 · *Electronics*
+
+</td>
+</tr>
+</table>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white">
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white">
-  <img src="https://img.shields.io/badge/Anthropic-191919?style=flat-square&logo=anthropic&logoColor=white">
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white">
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white">
-</p>
-
-<p align="center">
-  <sub>PhD Computer Science (UNSW) · Master of Finance ·
-  <a href="https://scholar.google.com/citations?user=1nRQ9twAAAAJ&hl=en">IEEE ICWS 2026 · HICSS-59 · <i>Electronics</i></a> ·
-  <b>Open to data science and AI engineering roles</b></sub>
+  <b>Open to data science and AI engineering roles in Sydney.</b>
 </p>
