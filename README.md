@@ -15,14 +15,15 @@
 <tr>
 <td width="50%" valign="top">
 
-### 📊 ESG Landscape Explorer
+### 🧭 ESG Portfolio Agent
 
-6.6M raw observations cleaned into a company × metric matrix, then PCA and clustering to see what
-separates one company from another. Turned out to be disclosure, not performance: 84% of
-environmental figures are estimates.
+An agent that answers fund carbon-intensity questions and checks trades against an ESG mandate,
+built on top of my OntoMetric system instead of replacing it. The model only picks the next step;
+every number comes from a service, and a breaching trade waits for a second person to approve. I
+wrote probes that try to break those rules (forged tokens, wrong-role approvals) and none got through.
 
-**[🚀 Live dashboard](https://huggingface.co/spaces/Inspiring-Ming/esg-landscape-explorer)** · [Code](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML)
-<br>`Python` `scikit-learn` `SQL` `Streamlit`
+[Code](https://github.com/Inspiring-Ming/AI-Agent-for-ESG)
+<br>`Claude` `MCP` `FastAPI` `Docker Compose`
 
 </td>
 <td width="50%" valign="top">
@@ -68,6 +69,18 @@ from **ANZ, CBA, NAB and Westpac**. There's a gap — but two models disagreed o
 <tr>
 <td width="50%" valign="top">
 
+### 📊 ESG Landscape Explorer
+
+6.6M raw observations cleaned into a company × metric matrix, then PCA and clustering to see what
+separates one company from another. Turned out to be disclosure, not performance: 84% of
+environmental figures are estimates.
+
+**[🚀 Live dashboard](https://huggingface.co/spaces/Inspiring-Ming/esg-landscape-explorer)** · [Code](https://github.com/Inspiring-Ming/DataAnalysis_SQL-ML)
+<br>`Python` `scikit-learn` `SQL` `Streamlit`
+
+</td>
+<td width="50%" valign="top">
+
 ### 🎬 IMDb Sentiment
 
 The standard Keras tutorial flattens an embedding layer, throwing away word order. I ran three
@@ -78,7 +91,9 @@ beating both the tutorial and an LSTM.
 <br>`TensorFlow/Keras` `NLP` `Docker`
 
 </td>
-<td width="50%" valign="top">
+</tr>
+<tr>
+<td colspan="2" valign="top">
 
 ### 🛠 Toolkit
 
