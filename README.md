@@ -1,7 +1,7 @@
 <h1 align="center">Jasmin (Mingqin) Yu</h1>
 
 <p align="center">
-  <sub>I work on LLM systems, agents and knowledge graphs. Sydney.</sub>
+  <sub>I build LLM systems, AI agents and knowledge graphs, mostly for finance and ESG. Sydney.</sub>
 </p>
 
 <p align="center">
@@ -15,10 +15,10 @@
 <tr>
 <td width="50%" valign="top">
 
-### 🧭 ESG Portfolio Agent
+### 🧭 ESG Portfolio Agent — Pre-Trade Compliance
 
 An agent that answers fund carbon-intensity questions and checks trades against an ESG mandate,
-built on top of my OntoMetric system instead of replacing it. The model only picks the next step;
+built on top of my existing ESG metric system (IEEE ICWS 2026) instead of replacing it. The model only picks the next step;
 every number comes from a service, and a breaching trade waits for a second person to approve. I
 wrote probes that try to break those rules (forged tokens, wrong-role approvals) and none got through.
 
@@ -28,7 +28,7 @@ wrote probes that try to break those rules (forged tokens, wrong-role approvals)
 </td>
 <td width="50%" valign="top">
 
-### 🤖 Grounded RAG + Agent
+### 🤖 RAG vs. Agent over ESG Data
 
 I kept reading that agents beat fixed pipelines, so I built both over the same data to check. For
 most questions the pipeline won: cheaper, easier to test, same answer. The agent only paid off when
@@ -43,7 +43,7 @@ in a bank.
 <tr>
 <td width="50%" valign="top">
 
-### 🕸️ OntoMetric — Knowledge Graph
+### 🕸️ OntoMetric — LLM to ESG Knowledge Graph
 
 Asking an LLM to pull numbers out of sustainability reports gave answers that looked right and
 often weren't. So I built a knowledge graph defining each metric — meaning, calculation, source —
@@ -55,7 +55,7 @@ and had the model fill that instead. Accuracy went from under 10% to 65–90%, e
 </td>
 <td width="50%" valign="top">
 
-### 🏦 Materiality Misalignment Risk
+### 🏦 Bank Disclosure vs. SASB — Materiality Risk
 
 Do the big four Australian banks report what the SASB standard says matters? I scored 20 reports
 from **ANZ, CBA, NAB and Westpac**. There's a gap — but two models disagreed on its size (0.172 vs
@@ -81,7 +81,7 @@ environmental figures are estimates.
 </td>
 <td width="50%" valign="top">
 
-### 🎬 IMDb Sentiment
+### 🎬 IMDb Sentiment — Architecture Bake-off
 
 The standard Keras tutorial flattens an embedding layer, throwing away word order. I ran three
 models on identical splits to see if that mattered. Average-pooling won (0.838 accuracy, 0.840 F1),
@@ -106,7 +106,7 @@ beating both the tutorial and an LSTM.
 Four years on an industry PhD with Cognitivo, including a Westpac project on ESG risk scoring.
 Two years in corporate banking before that.
 
-**Published:** IEEE ICKG 2026 · IEEE ICWS 2026 · HICSS-59 · *Electronics*
+**Published:** [IEEE ICKG 2026](https://arxiv.org/abs/2512.01289) · [IEEE ICWS 2026](https://doi.org/10.1109/ICWS72778.2026.00052) · HICSS-59 · [*Electronics* 2024](https://doi.org/10.3390/electronics13091719)
 
 </td>
 </tr>
