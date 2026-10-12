@@ -49,7 +49,7 @@ Asking an LLM to pull numbers out of sustainability reports gave answers that lo
 often weren't. So I built a knowledge graph defining each metric — meaning, calculation, source —
 and had the model fill that instead. Accuracy went from under 10% to 65–90%, every figure traceable.
 
-**[🌐 Project page](https://inspiring-ming.github.io/OntoMetric/)** · [Code](https://github.com/Inspiring-Ming/ESG-Metric-KG-System) · *IEEE ICWS 2026*
+**[🌐 Project page](https://inspiring-ming.github.io/OntoMetric/)** · [Code](https://github.com/Inspiring-Ming/OntoMetric) · [Paper](https://arxiv.org/abs/2512.01289) · *IEEE ICKG 2026*
 <br>`Knowledge Graph` `Ontology` `RAG` `Provenance`
 
 </td>
@@ -106,7 +106,7 @@ beating both the tutorial and an LSTM.
 Four years on an industry PhD with Cognitivo, including a Westpac project on ESG risk scoring.
 Two years in corporate banking before that.
 
-**Published:** IEEE ICWS 2026 · HICSS-59 · *Electronics*
+**Published:** IEEE ICKG 2026 · IEEE ICWS 2026 · HICSS-59 · *Electronics*
 
 </td>
 </tr>
