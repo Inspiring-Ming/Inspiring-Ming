@@ -22,7 +22,7 @@ built on top of my OntoMetric system instead of replacing it. The model only pic
 every number comes from a service, and a breaching trade waits for a second person to approve. I
 wrote probes that try to break those rules (forged tokens, wrong-role approvals) and none got through.
 
-[Code](https://github.com/Inspiring-Ming/AI-Agent-for-ESG)
+**[🌐 Project page](https://inspiring-ming.github.io/AI-Agent-for-ESG/)** · [Code](https://github.com/Inspiring-Ming/AI-Agent-for-ESG)
 <br>`Claude` `MCP` `FastAPI` `Docker Compose`
 
 </td>
