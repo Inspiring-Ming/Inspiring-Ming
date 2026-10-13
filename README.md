@@ -1,7 +1,7 @@
 <h1 align="center">Jasmin (Mingqin) Yu</h1>
 
 <p align="center">
-  <sub>I build LLM systems, AI agents and knowledge graphs, mostly for finance and ESG. Sydney.</sub>
+  <sub>I work on LLM systems, AI agents and knowledge graphs for financial services and ESG. Based in Sydney.</sub>
 </p>
 
 <p align="center">
